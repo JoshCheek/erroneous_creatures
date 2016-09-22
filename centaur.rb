@@ -3,12 +3,13 @@ class Centaur
   attr_reader :name, :breed
   attr_accessor :crankiness, :standing, :laying, :sleeping
 
-  def initialize(name, breed, standing=true, laying=false, sleeping=false)
+  def initialize(name, breed, standing=true, laying=false, sleeping=false, sitting=false)
     @name = name
     @breed = breed
     @standing = standing
     @laying = laying
     @sleeping = sleeping
+    @sitting = sitting
   end
 
   def shoot
@@ -27,6 +28,14 @@ class Centaur
 
   def cranky?
    @crankiness < 3 ? "false" : "true"
+  end
+
+  def sitting?
+    @sitting
+  end
+
+  def sit_down
+    @sitting = true
   end
 
   def standing?

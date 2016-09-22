@@ -94,6 +94,13 @@ class CentaurTest < Minitest::Test
     centaur = Centaur.new("George","Palomino")
     centaur.lay_down
     centaur.stand_up
+    refute centaur.standing?
+  end
+
+  def test_it_can_sit_down
+    centaur = Centaur.new("George","Palomino")
+    centaur.stand_up
+    centaur.sit_down
     assert centaur.standing?
   end
 
