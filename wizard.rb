@@ -9,6 +9,7 @@ class Wizard
   end
 
   def bearded?
+    return if @bearded[:bearded] == false
     @bearded
   end
 
