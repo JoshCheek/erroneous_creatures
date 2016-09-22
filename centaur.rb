@@ -9,7 +9,7 @@ class Centaur
     @standing = standing
     @laying = laying
     @sleeping = sleeping
-	@crankiness = 0
+    @crankiness = 0
   end
 
   def shoot
